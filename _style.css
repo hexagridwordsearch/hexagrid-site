@@ -1,0 +1,30 @@
+/* Hexa Grid — site styles. Colours are the app's own Cream & Honey palette. */
+:root{
+  --paper:#FFF1DD; --card:#F9E8CF; --ink:#342513; --ink-soft:#543B16;
+  --honey:#D49D5E; --rule:#E6D3B3;
+}
+@media (prefers-color-scheme:dark){
+  :root{ --paper:#141212; --card:#241B12; --ink:#FFF1DD; --ink-soft:#D49D5E;
+         --honey:#F0BB77; --rule:#40331F; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);line-height:1.65;
+  font-family:"Ubuntu Mono",ui-monospace,"SF Mono",Menlo,monospace;font-size:16px}
+.wrap{max-width:680px;margin:0 auto;padding:56px 22px 80px}
+header{margin-bottom:34px}
+.mark{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.mark svg{width:34px;height:38px;flex:none}
+.mark span{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:21px;letter-spacing:-.01em}
+h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:34px;line-height:1.15;margin:0 0 8px}
+h2{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:21px;margin:36px 0 8px}
+h3{font-size:16px;margin:24px 0 4px}
+p,li{max-width:62ch}
+a{color:var(--ink);text-underline-offset:3px;text-decoration-color:var(--honey)}
+a:hover{color:var(--ink-soft)}
+.updated{color:var(--ink-soft);font-size:13px;margin:0 0 30px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:18px 20px;margin:22px 0}
+.card > :last-child{margin-bottom:0}
+.card > :first-child{margin-top:0}
+nav{margin-top:44px;padding-top:20px;border-top:1px solid var(--rule);font-size:14px}
+nav a{margin-right:18px}
+footer{margin-top:40px;color:var(--ink-soft);font-size:13px}
